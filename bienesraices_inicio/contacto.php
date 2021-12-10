@@ -1,5 +1,6 @@
-<?php 
-include 'includes/templates/header.php';?>
+<?php
+require 'includes/funciones.php';
+incluirTemplate('header')?>
 
     <main class="contenedor seccion">
         <h1>Contacto</h1>
@@ -11,7 +12,7 @@ include 'includes/templates/header.php';?>
     </main>
 
     <h2>Llene el formulario de Contacto</h2>
-    <form class="formulario">
+    <form class="formulario contenedor">
         <fieldset>
             <legend>Informacion Personal</legend>
             <label for="nombre">Nombre</label>
@@ -61,20 +62,7 @@ include 'includes/templates/header.php';?>
                 <input type="time"  id="hora" min="09:00" max="18:00">
             
         </fieldset>
-        <input type="submit" value="Enviar" class="boton-verde"
+        <input type="submit" value="Enviar" class="boton-verde">
     </form>
-    <footer class="footer seccion">
-        <div class="contenedor contenedor-footer">
-            <nav class="navegacion">
-                <a href="nosotros.php">Nosotros</a>
-                <a href="anuncios.php">Anuncios</a>
-                <a href="blog.php">Blog</a>
-                <a href="contacto.php">Contacto</a>
-            </nav>
-        </div>
-        <p class="copyright">Todos los derecho reservados 2021 &copy;</p>
-    </footer>
-    <script src="build/js/bundle.min.js"></script>
-</body>
-
-</html>
+    <?php
+incluirTemplate('footer')?>
